@@ -1,0 +1,54 @@
+npm notice run ria-qa-challenge@1.0.0 npx
+npm notice run 'mocha' selenium/tests --timeout 120000 --reporter spec
+
+
+  Ria calculator (es-cl) - CLP -> Haiti HTG [Selenium]
+    ✔ does not accept alphabet characters in the amount field (79ms)
+    1) shows "Please enter a valid amount" when letters are entered
+    ✔ "Send to" dropdown lets the user select a country (Haiti / HTG) (2359ms)
+    ✔ converts 25000 CLP to HTG using the displayed rate (3377ms)
+    ✔ recalculates the received amount when the send amount changes (25000 -> 50000) (4705ms)
+    ✔ "Get Started" on the calculator lands on secure.riamoneytransfer.com (7320ms)
+
+  Register after switching the site country to United States [Selenium]
+    2) site country selector switches Chile -> United States (/en-us/)
+    3) Register after switching to United States shows the country selection page
+
+  secure.riamoneytransfer.com [Selenium]
+    ✔ shows Register, phone/email and password
+    4) Register navigates to /registration and shows the country selection page
+
+
+  6 passing (2m)
+  4 failing
+
+  1) Ria calculator (es-cl) - CLP -> Haiti HTG [Selenium]
+       shows "Please enter a valid amount" when letters are entered:
+     AssertionError [ERR_ASSERTION]: No "valid amount" message is shown after typing letters
+      at Context.<anonymous> (selenium/tests/ria-calculator.test.js:55:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+  2) Register after switching the site country to United States [Selenium]
+       site country selector switches Chile -> United States (/en-us/):
+     Error: BLOCKED: www /en-us/ answers automation with a bot challenge / 403 (Cloudflare). Not a test bug; not bypassed.
+      at assertNotBlocked (selenium/lib/helpers.js:38:13)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Object.switchToUnitedStates (selenium/lib/helpers.js:222:3)
+      at async Context.<anonymous> (selenium/tests/ria-register-us.test.js:27:5)
+
+  3) Register after switching the site country to United States [Selenium]
+       Register after switching to United States shows the country selection page:
+     Error: BLOCKED: www /en-us/ answers automation with a bot challenge / 403 (Cloudflare). Not a test bug; not bypassed.
+      at assertNotBlocked (selenium/lib/helpers.js:38:13)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Object.switchToUnitedStates (selenium/lib/helpers.js:213:57)
+      at async Context.<anonymous> (selenium/tests/ria-register-us.test.js:33:5)
+
+  4) secure.riamoneytransfer.com [Selenium]
+       Register navigates to /registration and shows the country selection page:
+     AssertionError [ERR_ASSERTION]: GEO-BLOCKED: registration is not available from this location (Chile). Not a test bug.
+      at Context.<anonymous> (selenium/tests/ria-secure.test.js:35:14)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+
+

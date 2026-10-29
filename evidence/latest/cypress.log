@@ -1,0 +1,186 @@
+npm notice run ria-qa-challenge@1.0.0 npx
+npm notice run 'cypress' run --browser chrome --headed --env PAUSE=6000
+
+DevTools listening on ws://127.0.0.1:52244/devtools/browser/89c46492-f741-4350-8362-5dce23e736ff
+
+/bin/sh: <home>/Library/Caches/Cypress/13.17.0/Cypress.app/Contents/Resources/app/node_modules/term-size/vendor/macos/term-size: Bad CPU type in executable
+================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        13.17.0                                                                        │
+  │ Browser:        Chrome 156                                                                     │
+  │ Node Version:   v26.3.0 (<home>/.nvm/versions/node/v26.3.0/bin/node)        │
+  │ Specs:          2 found (ria-calculator.cy.js, ria-secure-registration.cy.js)                  │
+  │ Searched:       cypress/e2e/**/*.cy.js                                                         │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  ria-calculator.cy.js                                                            (1 of 2)
+
+
+  Ria calculator (home page) - CLP -> Haiti HTG
+    1. "You send" amount validation
+      1) "before each" hook for "does not accept alphabet characters in the amount field"
+
+
+  0 passing (7s)
+  1 failing
+
+  1) Ria calculator (home page) - CLP -> Haiti HTG
+       1. "You send" amount validation
+         "before each" hook for "does not accept alphabet characters in the amount field":
+     CypressError: `cy.visit()` failed trying to load:
+
+https://www.riamoneytransfer.com/es-cl/
+
+The response we received from your web server was:
+
+  > 403: Forbidden
+
+This was considered a failure because the status code was not `2xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Ria calculator (home page) ...`
+      at <unknown> (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:131591:76)
+      at visitFailedByErr (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:131006:12)
+      at <unknown> (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:131574:13)
+      at tryCatcher (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:1830:23)
+      at Promise._settlePromiseFromHandler (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:1542:31)
+      at Promise._settlePromise (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:1599:18)
+      at Promise._settlePromise0 (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:1644:10)
+      at Promise._settlePromises (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:1720:18)
+      at _drainQueueStep (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:2430:12)
+      at _drainQueue (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:2423:9)
+      at Async._drainQueues (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:2439:5)
+      at Async.drainQueues (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:2309:14)
+  From Your Spec Code:
+      at openCalculator (webpack://ria-qa-challenge/./cypress/support/commands.js:29:5)
+      at Context.eval (webpack://ria-qa-challenge/./cypress/e2e/ria-calculator.cy.js:8:19)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        5                                                                                │
+  │ Passing:      0                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      4                                                                                │
+  │ Screenshots:  1                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     6 seconds                                                                        │
+  │ Spec Ran:     ria-calculator.cy.js                                                             │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  <project>/screenshots/cypress/ria-cal     (1680x877)
+     culator.cy.js/failed__does_not_accept_alphabet_characters_in_the_amount_field.pn               
+     g                                                                                              
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  ria-secure-registration.cy.js                                                   (2 of 2)
+
+
+  Secure site (direct visit)
+    ✓ shows Register, phone/email and password (8354ms)
+    ✓ Register link navigates to /registration (4921ms)
+    1) shows the country selection page after Register
+
+  Calculator "Get Started" -> secure.riamoneytransfer.com
+    2) Get Started lands on secure.riamoneytransfer.com
+
+
+  2 passing (57s)
+  2 failing
+
+  1) Secure site (direct visit)
+       shows the country selection page after Register:
+     Error: Timed out retrying after 15000ms: GEO-BLOCKED: registration is not available from this location (Chile). Not a test bug.
+      at Context.eval (webpack://ria-qa-challenge/./cypress/e2e/ria-secure-registration.cy.js:58:14)
+
+  2) Calculator "Get Started" -> secure.riamoneytransfer.com
+       Get Started lands on secure.riamoneytransfer.com:
+     CypressError: `cy.visit()` failed trying to load:
+
+https://www.riamoneytransfer.com/es-cl/
+
+The response we received from your web server was:
+
+  > 403: Forbidden
+
+This was considered a failure because the status code was not `2xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+      at <unknown> (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:131591:76)
+      at visitFailedByErr (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:131006:12)
+      at <unknown> (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:131574:13)
+      at tryCatcher (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:1830:23)
+      at Promise._settlePromiseFromHandler (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:1542:31)
+      at Promise._settlePromise (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:1599:18)
+      at Promise._settlePromise0 (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:1644:10)
+      at Promise._settlePromises (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:1720:18)
+      at _drainQueueStep (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:2430:12)
+      at _drainQueue (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:2423:9)
+      at Async._drainQueues (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:2439:5)
+      at Async.drainQueues (https://www.riamoneytransfer.com/__cypress/runner/cypress_runner.js:2309:14)
+  From Your Spec Code:
+      at openCalculator (webpack://ria-qa-challenge/./cypress/support/commands.js:29:5)
+      at Context.eval (webpack://ria-qa-challenge/./cypress/e2e/ria-secure-registration.cy.js:71:19)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        4                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      2                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  4                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     57 seconds                                                                       │
+  │ Spec Ran:     ria-secure-registration.cy.js                                                    │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  <project>/screenshots/cypress/ria-sec     (1680x877)
+     ure-registration.cy.js/passed__shows_Register_phone_email_and_password.png                     
+  -  <project>/screenshots/cypress/ria-sec     (1680x877)
+     ure-registration.cy.js/passed__Register_link_navigates_to_registration.png                     
+  -  <project>/screenshots/cypress/ria-sec     (1680x877)
+     ure-registration.cy.js/failed__shows_the_country_selection_page_after_Register.p               
+     ng                                                                                             
+  -  <project>/screenshots/cypress/ria-sec     (1680x877)
+     ure-registration.cy.js/failed__Get_Started_lands_on_secure.riamoneytransfer.com.               
+     png                                                                                            
+
+
+/bin/sh: <home>/Library/Caches/Cypress/13.17.0/Cypress.app/Contents/Resources/app/node_modules/term-size/vendor/macos/term-size: Bad CPU type in executable
+================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✖  ria-calculator.cy.js                     00:06        5        -        1        -        4 │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✖  ria-secure-registration.cy.js            00:57        4        2        2        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  2 of 2 failed (100%)                     01:03        9        2        3        -        4  
+

@@ -1,0 +1,39 @@
+npm notice run ria-qa-challenge@1.0.0 npx
+npm notice run 'newman' run postman/ria-api-tests.postman_collection.json -r cli,json,htmlextra --reporter-json-export evidence/latest/newman-results.json --reporter-htmlextra-export evidence/latest/newman-report.html
+newman
+
+RIA QA Challenge - API tests
+
+→ GET /posts
+  GET https://jsonplaceholder.typicode.com/posts/ [200 OK, 28.49kB, 267ms]
+  ✓  Status is 200 OK
+  ✓  Response is a non-empty array
+  ✓  Every post has non-empty "title" and "body"
+  ✓  No field of any post contains the word "zombie"
+
+→ POST /post
+  POST https://httpbin.org/post [200 OK, 1.19kB, 447ms]
+  ✓  Status is 200 or 201
+  ✓  Echoed request body matches what was sent
+  ✓  topping is exactly bacon, cheese and mushroom
+  ✓  topping does not contain chicken
+
+┌─────────────────────────┬────────────────────┬────────────────────┐
+│                         │           executed │             failed │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              iterations │                  1 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│                requests │                  2 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│            test-scripts │                  2 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│      prerequest-scripts │                  0 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              assertions │                  8 │                  0 │
+├─────────────────────────┴────────────────────┴────────────────────┤
+│ total run duration: 758ms                                         │
+├───────────────────────────────────────────────────────────────────┤
+│ total data received: 28.43kB (approx)                             │
+├───────────────────────────────────────────────────────────────────┤
+│ average response time: 357ms [min: 267ms, max: 447ms, s.d.: 90ms] │
+└───────────────────────────────────────────────────────────────────┘

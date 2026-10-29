@@ -1,0 +1,48 @@
+Exit codes (0 = all green; number = failing tests):
+  postman    (newman): 0   expected 0
+  selenium   (mocha) : 4   expected 4 (valid-amount message, geo-blocked registration, 2 extra tests blocked on /en-us/)
+  playwright         : 1   expected 1 (Playwright returns 1 for any failure; same four findings)
+  cypress            : 3   expected >0 if Cloudflare challenges www (see README)
+
+Evidence files:
+evidence/latest/SUMMARY.txt
+evidence/latest/cypress.log
+evidence/latest/newman-report.html
+evidence/latest/newman-results.json
+evidence/latest/playwright-results.json
+evidence/latest/playwright.log
+evidence/latest/postman.log
+evidence/latest/run-info.txt
+evidence/latest/selenium.log
+screenshots/cypress/ria-calculator.cy.js/failed__does_not_accept_alphabet_characters_in_the_amount_field.png
+screenshots/cypress/ria-secure-registration.cy.js/failed__Get_Started_lands_on_secure.riamoneytransfer.com.png
+screenshots/cypress/ria-secure-registration.cy.js/failed__shows_the_country_selection_page_after_Register.png
+screenshots/cypress/ria-secure-registration.cy.js/passed__Register_link_navigates_to_registration.png
+screenshots/cypress/ria-secure-registration.cy.js/passed__shows_Register_phone_email_and_password.png
+screenshots/playwright/failed__Register_after_switching_to_United_States_shows_the_country_selection_page.png
+screenshots/playwright/failed__Register_navigates_to_registration_and_shows_the_country_selection_page.png
+screenshots/playwright/failed__shows_Please_enter_a_valid_amount_when_letters_are_entered.png
+screenshots/playwright/failed__site_country_selector_switches_Chile_-_United_States_en-us_.png
+screenshots/playwright/passed___Get_Started_on_the_calculator_lands_on_secure.riamoneytransfer.com.png
+screenshots/playwright/passed___Send_to_dropdown_lets_the_user_select_a_country_Haiti_HTG_.png
+screenshots/playwright/passed__converts_25000_CLP_to_HTG_using_the_displayed_rate.png
+screenshots/playwright/passed__does_not_accept_alphabet_characters_in_the_amount_field.png
+screenshots/playwright/passed__recalculates_the_received_amount_when_the_send_amount_changes_25000_-_50000_.png
+screenshots/playwright/passed__shows_Register_phone_email_and_password.png
+screenshots/playwright/step__send-to-dropdown-open.png
+screenshots/postman/newman-report.png
+screenshots/results/cypress-results.png
+screenshots/results/playwright-results.png
+screenshots/results/postman-results.png
+screenshots/results/selenium-results.png
+screenshots/selenium/failed__Register_after_switching_to_United_States_shows_the_country_selection_page.png
+screenshots/selenium/failed__Register_navigates_to_registration_and_shows_the_country_selection_page.png
+screenshots/selenium/failed__shows_Please_enter_a_valid_amount_when_letters_are_entered.png
+screenshots/selenium/failed__site_country_selector_switches_Chile_-_United_States_en-us_.png
+screenshots/selenium/passed___Get_Started_on_the_calculator_lands_on_secure.riamoneytransfer.com.png
+screenshots/selenium/passed___Send_to_dropdown_lets_the_user_select_a_country_Haiti_HTG_.png
+screenshots/selenium/passed__converts_25000_CLP_to_HTG_using_the_displayed_rate.png
+screenshots/selenium/passed__does_not_accept_alphabet_characters_in_the_amount_field.png
+screenshots/selenium/passed__recalculates_the_received_amount_when_the_send_amount_changes_25000_-_50000_.png
+screenshots/selenium/passed__shows_Register_phone_email_and_password.png
+screenshots/selenium/step__send-to-dropdown-open.png

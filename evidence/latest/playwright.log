@@ -1,0 +1,408 @@
+npm notice run ria-qa-challenge@1.0.0 npx
+npm notice run 'playwright' test
+
+Running 10 tests using 1 worker
+
+  ✓   1 playwright/tests/ria-calculator.spec.js:32:3 › Ria calculator (es-cl) - CLP -> Haiti HTG [Playwright] › does not accept alphabet characters in the amount field (8.1s)
+  ✘   2 playwright/tests/ria-calculator.spec.js:39:3 › Ria calculator (es-cl) - CLP -> Haiti HTG [Playwright] › shows "Please enter a valid amount" when letters are entered (14.9s)
+  ✓   3 playwright/tests/ria-calculator.spec.js:46:3 › Ria calculator (es-cl) - CLP -> Haiti HTG [Playwright] › "Send to" dropdown lets the user select a country (Haiti / HTG) (10.9s)
+  ✓   4 playwright/tests/ria-calculator.spec.js:58:3 › Ria calculator (es-cl) - CLP -> Haiti HTG [Playwright] › converts 25000 CLP to HTG using the displayed rate (12.3s)
+  ✓   5 playwright/tests/ria-calculator.spec.js:63:3 › Ria calculator (es-cl) - CLP -> Haiti HTG [Playwright] › recalculates the received amount when the send amount changes (25000 -> 50000) (12.4s)
+  ✓   6 playwright/tests/ria-calculator.spec.js:70:3 › Ria calculator (es-cl) - CLP -> Haiti HTG [Playwright] › "Get Started" on the calculator lands on secure.riamoneytransfer.com (15.7s)
+  ✘   7 playwright/tests/ria-register-us.spec.js:21:3 › Register after switching the site country to United States [Playwright] › site country selector switches Chile -> United States (/en-us/) (17.5s)
+  ✘   8 playwright/tests/ria-register-us.spec.js:27:3 › Register after switching the site country to United States [Playwright] › Register after switching to United States shows the country selection page (18.4s)
+  ✓   9 playwright/tests/ria-secure.spec.js:18:3 › secure.riamoneytransfer.com [Playwright] › shows Register, phone/email and password (13.7s)
+  ✘  10 playwright/tests/ria-secure.spec.js:24:3 › secure.riamoneytransfer.com [Playwright] › Register navigates to /registration and shows the country selection page (18.3s)
+
+
+  1) playwright/tests/ria-calculator.spec.js:39:3 › Ria calculator (es-cl) - CLP -> Haiti HTG [Playwright] › shows "Please enter a valid amount" when letters are entered 
+
+    Error: No "valid amount" message is shown after typing letters
+
+    expect(locator).toContainText(expected) failed
+
+    Locator: locator('body')
+    Timeout: 5000ms
+    Expected pattern: /Please enter a valid amount|monto v[aá]lido|importe v[aá]lido/i
+    Received string:  "Envío de dineroEnvía dinero a más de 190 paísesFormas de enviarEnviar dineroEnviar dinero en líneaEnviar dinero con la appEnviar dinero en personaEnviar dinero en TurbusDestinos popularesEnviar dinero a ColombiaEnviar dinero a PerúEnviar dinero a HaitíEnviar dinero a EcuadorEnviar dinero a BoliviaEnviar dinero a VenezuelaSocios de pagoEnviar dinero a YapeEnviar dinero a NequiEnviar dinero a MoncashEnviar dinero a Pago MovilFormas de recibirRecibir dineroDepósito bancarioRetiro en efectivoBilletera digitalEntrega a domicilioCajero automáticoRastrear una transferenciaSucursalesRecursosCentro de ayudaEncuentra respuestas y soporte al cliente.ServiciosCobro de cheques, pago de facturas y más.CarrerasÚnete al equipo global de Ria.Acerca de RiaDescubre nuestra historia y propósito.RecursosObtén más información sobre Ria Money Transfer, incluyendo nuestros servicios y soporte.Descargar la appIniciar sesiónRegistrarse4,8 ★ en App Store4,8 ★ en Play StoreEnvía dinero.Rápido, seguro y sin sorpresasÚnete a los más de 100 millones de personas que confían en Ria para transferir dinero al extranjero de forma rápida y segura.¡Tu primer envío tiene una tasa promocional!
+    1 CLP =3,1643,2663 COPQuote detailsEnvías
+    CLPReciben
+    COPEnter an amount between 1-10000000 CLP.Método de pago
+    Banco directoMétodo de entrega
+    BancoComisión
+    2.6180 CLP comisión del primer envío
+    Total a pagar
+    100.000 CLPEnviar DineroEntrega rápida y convenienteEnvía dinero en pocos clicks a más de 190 países con Ria.Transferencias seguras en todo el mundoQuédate tranquilo sabiendo que hemos realizado más de mil millones de transferencias seguras.Ayuda de personas realesAccede a nuestro equipo de soporte 24/7 cuando lo necesites.Dinero donde lo necesitasPara los momentos cotidianos de la vidaCOP enviado para las compras de mamáHTG enviado para la matrícula de mi hijoPEN enviado para que mamá tenga todo lo que necesitaMXN enviado para la boda de mi mejor amigoBOB enviado para ayudar el negocio de mi hermanaUSD enviado para la medicina de mi papáGTQ enviado para la quinceañera de mi primaDescarga la appEnvía dinero en cualquier momento y lugar con RiaLas transferencias de dinero no tienen por qué ser complicadas. Ria lo hace fácil para enviar dinero en línea, en la app o en persona. También puedes enviar una transferencia en más de 200 sucursales de Turbus en Chile.Formas de enviarRecibe dinero en más de 100 divisasRia siempre está a tu alcance. Recibe dinero mediante retiro en efectivo, depósito bancario, billetera móvil y más. Tu transferencia puede entregarse directamente a socios como Nequi, Yape y Yolo Pago.Formas de recibir4,8 ★ en App Store4,8 ★ en Play StoreTransferencias confiables desde hace 38+ años EN TODO EL MUNDOLo que dicen nuestros clientes de RiaEG
+    Excelente, rápido y confiable
+    CC
+    Fue fácil enviar dinero
+    EC
+    Excelente servicio
+    BD
+    Muy fácil y rápido enviar dinero a través de Ria
+    MA
+    Rápido, simple y eficiente. Gracias Ria
+    GC
+    Fácil de usar y excelentes tipos de cambio
+    MM
+    Las transferencias son rápidas y seguras
+    EG
+    Excelente, rápido y confiable
+    CC
+    Fue fácil enviar dinero
+    EC
+    Excelente servicio
+    BD
+    Muy fácil y rápido enviar dinero a través de Ria
+    MA
+    Rápido, simple y eficiente. Gracias Ria
+    GC
+    Fácil de usar y excelentes tipos de cambio
+    MM
+    Las transferencias son rápidas y seguras
+    EG
+    Excelente, rápido y confiable
+    CC
+    Fue fácil enviar dinero
+    EC
+    Excelente servicio
+    BD
+    Muy fácil y rápido enviar dinero a través de Ria
+    MA
+    Rápido, simple y eficiente. Gracias Ria
+    GC
+    Fácil de usar y excelentes tipos de cambio
+    MM
+    Las transferencias son rápidas y seguras
+    AB
+    La app de Ria es útil e informativa
+    RJ
+    Servicio rápido y seguro
+    AB
+    Me encanta Ria porque es muy conveniente
+    MA
+    Es fácil hacer una transferencia
+    MK
+    Ria es simplemente increíble. Las transacciones son súper rápidasAB
+    La app de Ria es útil e informativa
+    RJ
+    Servicio rápido y seguro
+    AB
+    Me encanta Ria porque es muy conveniente
+    MA
+    Es fácil hacer una transferencia
+    MK
+    Ria es simplemente increíble. Las transacciones son súper rápidasAB
+    La app de Ria es útil e informativa
+    RJ
+    Servicio rápido y seguro
+    AB
+    Me encanta Ria porque es muy conveniente
+    MA
+    Es fácil hacer una transferencia
+    MK
+    Ria es simplemente increíble. Las transacciones son súper rápidasDONDE MÁS IMPORTANuestra red global respalda cada transferencia600 mil ubicaciones, 5 mil millones de cuentas bancarias y más de 100 billeteras digitales respaldan cada transacción.Seguridad confiable para tus transferenciasUsamos verificación de identidad, encriptación y monitoreo de fraude 24/7 para ayudarte a mantener tu dinero e información personal seguros cada vez que envías.Sobre nuestra seguridadComienza ahoraEnvía dinero en 3 pasos simples
+    Abre la app o el sitio web de Ria
+    Crea una cuenta o inicia sesión para comenzar.
+    Ingresa los datos del destinatario
+    Agrega su información y elige cómo recibirá el dinero.
+    Envía tu transferencia
+    Selecciona un método de pago, revisa los detalles y envía.
+    Donde lo necesitesEnvía dinero a más de 190 paísesEnviar dinero a ColombiaEnviar dinero a PerúEnviar dinero a HaitíEnviar dinero a República DominicanaEnviar dinero a EcuadorEnviar dinero a BoliviaEnviar dinero a FilipinasEnviar dinero a ParaguayEnviar dinero a EspañaEnviar dinero a BrasilEnviar dinero a VenezuelaEnviar dinero a ArgentinaPreguntas frecuentes¿Cuánto cuesta enviar dinero con Ria en Chile?Las comisiones varían según cómo y dónde envíes. Cada método tiene su precio según lo que ofrece, como entrega más rápida o mayor comodidad. Verás la comisión exacta antes de enviar.Conoce más sobre nuestras tasas y comisiones.¿Cuánto tiempo tarda una transferencia de dinero con Ria?Los tiempos de transferencia varían según cómo pagues, cómo se reciba el dinero y el país de destino. La forma más rápida de pagar suele ser con tarjeta de crédito o débito, y los pagos con tarjeta generalmente llegan a Ria en 15 minutos a 3 horas, lo que permite procesar las transferencias rápidamente. Algunas transferencias pueden tardar más según el horario bancario, fines de semana, festivos o revisiones de seguridad. Obtén más información sobre nuestros tiempos de transferencia.¿Mi dinero está seguro con Ria?Sí. Ria utiliza verificaciones de identidad, encriptación y monitoreo de fraude 24/7 para ayudar a mantener tu transferencia segura. Tu dinero e información personal están protegidos en cada paso. Obtén más información sobre nuestras medidas de seguridad.¿Qué información necesito para enviar dinero a Chile?Necesitarás el nombre completo de tu destinatario, su ubicación y cómo desea recibir el dinero. Si es un depósito bancario, también necesitarás el nombre del banco, el tipo de cuenta y el número de cuenta.Más información.¿Puedo enviar dinero desde una sucursal de Turbus?Sí. En Chile, puedes iniciar una transferencia Ria en cualquier sucursal de Turbus. Envía dinero fácilmente en persona visitando un mostrador de Turbus y proporcionando los datos de tu beneficiario y el método de pago.Obtén más información sobre Turbus con Ria.¿Necesitas más ayuda?ContáctanosSobre NosotrosAcerca deBlogCarrerasCorporativoConviértete en agenteSoportePolítica de privacidadAviso de cookiesTérminos y condicionesPrevención de fraudeCentro de ayudaDeclaración de accesibilidadFormulario para denunciantesSíguenosRia Money Transfer. © 2026 Dandelion Payments, Inc. Todos los derechos reservados.Preferencias de cookies
+    españolEnglishfrançais····
+    "
+
+    Call log:
+      - No "valid amount" message is shown after typing letters locator('body') with timeout 5000ms
+      - waiting for locator('body')
+        4 × locator resolved to <body class="antialiased">…</body>
+          - unexpected value "Envío de dineroEnvía dinero a más de 190 paísesFormas de enviarEnviar dineroEnviar dinero en líneaEnviar dinero con la appEnviar dinero en personaEnviar dinero en TurbusDestinos popularesEnviar dinero a ColombiaEnviar dinero a PerúEnviar dinero a HaitíEnviar dinero a EcuadorEnviar dinero a BoliviaEnviar dinero a VenezuelaSocios de pagoEnviar dinero a YapeEnviar dinero a NequiEnviar dinero a MoncashEnviar dinero a Pago MovilFormas de recibirRecibir dineroDepósito bancarioRetiro en efectivoBilletera digitalEntrega a domicilioCajero automáticoRastrear una transferenciaSucursalesRecursosCentro de ayudaEncuentra respuestas y soporte al cliente.ServiciosCobro de cheques, pago de facturas y más.CarrerasÚnete al equipo global de Ria.Acerca de RiaDescubre nuestra historia y propósito.RecursosObtén más información sobre Ria Money Transfer, incluyendo nuestros servicios y soporte.Descargar la appIniciar sesiónRegistrarse4,8 ★ en App Store4,8 ★ en Play StoreEnvía dinero.Rápido, seguro y sin sorpresasÚnete a los más de 100 millones de personas que confían en Ria para transferir dinero al extranjero de forma rápida y segura.Quote detailsEnvías
+    CLPReciben
+    COPEnter an amount between 1-10000000 CLP.Método de pago
+    Método de entrega
+    Comisión
+    Total a pagar
+    Enviar DineroEntrega rápida y convenienteEnvía dinero en pocos clicks a más de 190 países con Ria.Transferencias seguras en todo el mundoQuédate tranquilo sabiendo que hemos realizado más de mil millones de transferencias seguras.Ayuda de personas realesAccede a nuestro equipo de soporte 24/7 cuando lo necesites.Dinero donde lo necesitasPara los momentos cotidianos de la vidaCOP enviado para las compras de mamáHTG enviado para la matrícula de mi hijoPEN enviado para que mamá tenga todo lo que necesitaMXN enviado para la boda de mi mejor amigoBOB enviado para ayudar el negocio de mi hermanaUSD enviado para la medicina de mi papáGTQ enviado para la quinceañera de mi primaDescarga la appEnvía dinero en cualquier momento y lugar con RiaLas transferencias de dinero no tienen por qué ser complicadas. Ria lo hace fácil para enviar dinero en línea, en la app o en persona. También puedes enviar una transferencia en más de 200 sucursales de Turbus en Chile.Formas de enviarRecibe dinero en más de 100 divisasRia siempre está a tu alcance. Recibe dinero mediante retiro en efectivo, depósito bancario, billetera móvil y más. Tu transferencia puede entregarse directamente a socios como Nequi, Yape y Yolo Pago.Formas de recibir4,8 ★ en App Store4,8 ★ en Play StoreTransferencias confiables desde hace 38+ años EN TODO EL MUNDOLo que dicen nuestros clientes de RiaEG
+    Excelente, rápido y confiable
+    CC
+    Fue fácil enviar dinero
+    EC
+    Excelente servicio
+    BD
+    Muy fácil y rápido enviar dinero a través de Ria
+    MA
+    Rápido, simple y eficiente. Gracias Ria
+    GC
+    Fácil de usar y excelentes tipos de cambio
+    MM
+    Las transferencias son rápidas y seguras
+    EG
+    Excelente, rápido y confiable
+    CC
+    Fue fácil enviar dinero
+    EC
+    Excelente servicio
+    BD
+    Muy fácil y rápido enviar dinero a través de Ria
+    MA
+    Rápido, simple y eficiente. Gracias Ria
+    GC
+    Fácil de usar y excelentes tipos de cambio
+    MM
+    Las transferencias son rápidas y seguras
+    EG
+    Excelente, rápido y confiable
+    CC
+    Fue fácil enviar dinero
+    EC
+    Excelente servicio
+    BD
+    Muy fácil y rápido enviar dinero a través de Ria
+    MA
+    Rápido, simple y eficiente. Gracias Ria
+    GC
+    Fácil de usar y excelentes tipos de cambio
+    MM
+    Las transferencias son rápidas y seguras
+    AB
+    La app de Ria es útil e informativa
+    RJ
+    Servicio rápido y seguro
+    AB
+    Me encanta Ria porque es muy conveniente
+    MA
+    Es fácil hacer una transferencia
+    MK
+    Ria es simplemente increíble. Las transacciones son súper rápidasAB
+    La app de Ria es útil e informativa
+    RJ
+    Servicio rápido y seguro
+    AB
+    Me encanta Ria porque es muy conveniente
+    MA
+    Es fácil hacer una transferencia
+    MK
+    Ria es simplemente increíble. Las transacciones son súper rápidasAB
+    La app de Ria es útil e informativa
+    RJ
+    Servicio rápido y seguro
+    AB
+    Me encanta Ria porque es muy conveniente
+    MA
+    Es fácil hacer una transferencia
+    MK
+    Ria es simplemente increíble. Las transacciones son súper rápidasDONDE MÁS IMPORTANuestra red global respalda cada transferencia600 mil ubicaciones, 5 mil millones de cuentas bancarias y más de 100 billeteras digitales respaldan cada transacción.Seguridad confiable para tus transferenciasUsamos verificación de identidad, encriptación y monitoreo de fraude 24/7 para ayudarte a mantener tu dinero e información personal seguros cada vez que envías.Sobre nuestra seguridadComienza ahoraEnvía dinero en 3 pasos simples
+    Abre la app o el sitio web de Ria
+    Crea una cuenta o inicia sesión para comenzar.
+    Ingresa los datos del destinatario
+    Agrega su información y elige cómo recibirá el dinero.
+    Envía tu transferencia
+    Selecciona un método de pago, revisa los detalles y envía.
+    Donde lo necesitesEnvía dinero a más de 190 paísesEnviar dinero a ColombiaEnviar dinero a PerúEnviar dinero a HaitíEnviar dinero a República DominicanaEnviar dinero a EcuadorEnviar dinero a BoliviaEnviar dinero a FilipinasEnviar dinero a ParaguayEnviar dinero a EspañaEnviar dinero a BrasilEnviar dinero a VenezuelaEnviar dinero a ArgentinaPreguntas frecuentes¿Cuánto cuesta enviar dinero con Ria en Chile?Las comisiones varían según cómo y dónde envíes. Cada método tiene su precio según lo que ofrece, como entrega más rápida o mayor comodidad. Verás la comisión exacta antes de enviar.Conoce más sobre nuestras tasas y comisiones.¿Cuánto tiempo tarda una transferencia de dinero con Ria?Los tiempos de transferencia varían según cómo pagues, cómo se reciba el dinero y el país de destino. La forma más rápida de pagar suele ser con tarjeta de crédito o débito, y los pagos con tarjeta generalmente llegan a Ria en 15 minutos a 3 horas, lo que permite procesar las transferencias rápidamente. Algunas transferencias pueden tardar más según el horario bancario, fines de semana, festivos o revisiones de seguridad. Obtén más información sobre nuestros tiempos de transferencia.¿Mi dinero está seguro con Ria?Sí. Ria utiliza verificaciones de identidad, encriptación y monitoreo de fraude 24/7 para ayudar a mantener tu transferencia segura. Tu dinero e información personal están protegidos en cada paso. Obtén más información sobre nuestras medidas de seguridad.¿Qué información necesito para enviar dinero a Chile?Necesitarás el nombre completo de tu destinatario, su ubicación y cómo desea recibir el dinero. Si es un depósito bancario, también necesitarás el nombre del banco, el tipo de cuenta y el número de cuenta.Más información.¿Puedo enviar dinero desde una sucursal de Turbus?Sí. En Chile, puedes iniciar una transferencia Ria en cualquier sucursal de Turbus. Envía dinero fácilmente en persona visitando un mostrador de Turbus y proporcionando los datos de tu beneficiario y el método de pago.Obtén más información sobre Turbus con Ria.¿Necesitas más ayuda?ContáctanosSobre NosotrosAcerca deBlogCarrerasCorporativoConviértete en agenteSoportePolítica de privacidadAviso de cookiesTérminos y condicionesPrevención de fraudeCentro de ayudaDeclaración de accesibilidadFormulario para denunciantesSíguenosRia Money Transfer. © 2026 Dandelion Payments, Inc. Todos los derechos reservados.Preferencias de cookies
+    españolEnglishfrançais
+    
+    
+    
+    
+    "
+        10 × locator resolved to <body class="antialiased">…</body>
+           - unexpected value "Envío de dineroEnvía dinero a más de 190 paísesFormas de enviarEnviar dineroEnviar dinero en líneaEnviar dinero con la appEnviar dinero en personaEnviar dinero en TurbusDestinos popularesEnviar dinero a ColombiaEnviar dinero a PerúEnviar dinero a HaitíEnviar dinero a EcuadorEnviar dinero a BoliviaEnviar dinero a VenezuelaSocios de pagoEnviar dinero a YapeEnviar dinero a NequiEnviar dinero a MoncashEnviar dinero a Pago MovilFormas de recibirRecibir dineroDepósito bancarioRetiro en efectivoBilletera digitalEntrega a domicilioCajero automáticoRastrear una transferenciaSucursalesRecursosCentro de ayudaEncuentra respuestas y soporte al cliente.ServiciosCobro de cheques, pago de facturas y más.CarrerasÚnete al equipo global de Ria.Acerca de RiaDescubre nuestra historia y propósito.RecursosObtén más información sobre Ria Money Transfer, incluyendo nuestros servicios y soporte.Descargar la appIniciar sesiónRegistrarse4,8 ★ en App Store4,8 ★ en Play StoreEnvía dinero.Rápido, seguro y sin sorpresasÚnete a los más de 100 millones de personas que confían en Ria para transferir dinero al extranjero de forma rápida y segura.¡Tu primer envío tiene una tasa promocional!
+    1 CLP =3,1643,2663 COPQuote detailsEnvías
+    CLPReciben
+    COPEnter an amount between 1-10000000 CLP.Método de pago
+    Banco directoMétodo de entrega
+    BancoComisión
+    2.6180 CLP comisión del primer envío
+    Total a pagar
+    100.000 CLPEnviar DineroEntrega rápida y convenienteEnvía dinero en pocos clicks a más de 190 países con Ria.Transferencias seguras en todo el mundoQuédate tranquilo sabiendo que hemos realizado más de mil millones de transferencias seguras.Ayuda de personas realesAccede a nuestro equipo de soporte 24/7 cuando lo necesites.Dinero donde lo necesitasPara los momentos cotidianos de la vidaCOP enviado para las compras de mamáHTG enviado para la matrícula de mi hijoPEN enviado para que mamá tenga todo lo que necesitaMXN enviado para la boda de mi mejor amigoBOB enviado para ayudar el negocio de mi hermanaUSD enviado para la medicina de mi papáGTQ enviado para la quinceañera de mi primaDescarga la appEnvía dinero en cualquier momento y lugar con RiaLas transferencias de dinero no tienen por qué ser complicadas. Ria lo hace fácil para enviar dinero en línea, en la app o en persona. También puedes enviar una transferencia en más de 200 sucursales de Turbus en Chile.Formas de enviarRecibe dinero en más de 100 divisasRia siempre está a tu alcance. Recibe dinero mediante retiro en efectivo, depósito bancario, billetera móvil y más. Tu transferencia puede entregarse directamente a socios como Nequi, Yape y Yolo Pago.Formas de recibir4,8 ★ en App Store4,8 ★ en Play StoreTransferencias confiables desde hace 38+ años EN TODO EL MUNDOLo que dicen nuestros clientes de RiaEG
+    Excelente, rápido y confiable
+    CC
+    Fue fácil enviar dinero
+    EC
+    Excelente servicio
+    BD
+    Muy fácil y rápido enviar dinero a través de Ria
+    MA
+    Rápido, simple y eficiente. Gracias Ria
+    GC
+    Fácil de usar y excelentes tipos de cambio
+    MM
+    Las transferencias son rápidas y seguras
+    EG
+    Excelente, rápido y confiable
+    CC
+    Fue fácil enviar dinero
+    EC
+    Excelente servicio
+    BD
+    Muy fácil y rápido enviar dinero a través de Ria
+    MA
+    Rápido, simple y eficiente. Gracias Ria
+    GC
+    Fácil de usar y excelentes tipos de cambio
+    MM
+    Las transferencias son rápidas y seguras
+    EG
+    Excelente, rápido y confiable
+    CC
+    Fue fácil enviar dinero
+    EC
+    Excelente servicio
+    BD
+    Muy fácil y rápido enviar dinero a través de Ria
+    MA
+    Rápido, simple y eficiente. Gracias Ria
+    GC
+    Fácil de usar y excelentes tipos de cambio
+    MM
+    Las transferencias son rápidas y seguras
+    AB
+    La app de Ria es útil e informativa
+    RJ
+    Servicio rápido y seguro
+    AB
+    Me encanta Ria porque es muy conveniente
+    MA
+    Es fácil hacer una transferencia
+    MK
+    Ria es simplemente increíble. Las transacciones son súper rápidasAB
+    La app de Ria es útil e informativa
+    RJ
+    Servicio rápido y seguro
+    AB
+    Me encanta Ria porque es muy conveniente
+    MA
+    Es fácil hacer una transferencia
+    MK
+    Ria es simplemente increíble. Las transacciones son súper rápidasAB
+    La app de Ria es útil e informativa
+    RJ
+    Servicio rápido y seguro
+    AB
+    Me encanta Ria porque es muy conveniente
+    MA
+    Es fácil hacer una transferencia
+    MK
+    Ria es simplemente increíble. Las transacciones son súper rápidasDONDE MÁS IMPORTANuestra red global respalda cada transferencia600 mil ubicaciones, 5 mil millones de cuentas bancarias y más de 100 billeteras digitales respaldan cada transacción.Seguridad confiable para tus transferenciasUsamos verificación de identidad, encriptación y monitoreo de fraude 24/7 para ayudarte a mantener tu dinero e información personal seguros cada vez que envías.Sobre nuestra seguridadComienza ahoraEnvía dinero en 3 pasos simples
+    Abre la app o el sitio web de Ria
+    Crea una cuenta o inicia sesión para comenzar.
+    Ingresa los datos del destinatario
+    Agrega su información y elige cómo recibirá el dinero.
+    Envía tu transferencia
+    Selecciona un método de pago, revisa los detalles y envía.
+    Donde lo necesitesEnvía dinero a más de 190 paísesEnviar dinero a ColombiaEnviar dinero a PerúEnviar dinero a HaitíEnviar dinero a República DominicanaEnviar dinero a EcuadorEnviar dinero a BoliviaEnviar dinero a FilipinasEnviar dinero a ParaguayEnviar dinero a EspañaEnviar dinero a BrasilEnviar dinero a VenezuelaEnviar dinero a ArgentinaPreguntas frecuentes¿Cuánto cuesta enviar dinero con Ria en Chile?Las comisiones varían según cómo y dónde envíes. Cada método tiene su precio según lo que ofrece, como entrega más rápida o mayor comodidad. Verás la comisión exacta antes de enviar.Conoce más sobre nuestras tasas y comisiones.¿Cuánto tiempo tarda una transferencia de dinero con Ria?Los tiempos de transferencia varían según cómo pagues, cómo se reciba el dinero y el país de destino. La forma más rápida de pagar suele ser con tarjeta de crédito o débito, y los pagos con tarjeta generalmente llegan a Ria en 15 minutos a 3 horas, lo que permite procesar las transferencias rápidamente. Algunas transferencias pueden tardar más según el horario bancario, fines de semana, festivos o revisiones de seguridad. Obtén más información sobre nuestros tiempos de transferencia.¿Mi dinero está seguro con Ria?Sí. Ria utiliza verificaciones de identidad, encriptación y monitoreo de fraude 24/7 para ayudar a mantener tu transferencia segura. Tu dinero e información personal están protegidos en cada paso. Obtén más información sobre nuestras medidas de seguridad.¿Qué información necesito para enviar dinero a Chile?Necesitarás el nombre completo de tu destinatario, su ubicación y cómo desea recibir el dinero. Si es un depósito bancario, también necesitarás el nombre del banco, el tipo de cuenta y el número de cuenta.Más información.¿Puedo enviar dinero desde una sucursal de Turbus?Sí. En Chile, puedes iniciar una transferencia Ria en cualquier sucursal de Turbus. Envía dinero fácilmente en persona visitando un mostrador de Turbus y proporcionando los datos de tu beneficiario y el método de pago.Obtén más información sobre Turbus con Ria.¿Necesitas más ayuda?ContáctanosSobre NosotrosAcerca deBlogCarrerasCorporativoConviértete en agenteSoportePolítica de privacidadAviso de cookiesTérminos y condicionesPrevención de fraudeCentro de ayudaDeclaración de accesibilidadFormulario para denunciantesSíguenosRia Money Transfer. © 2026 Dandelion Payments, Inc. Todos los derechos reservados.Preferencias de cookies
+    españolEnglishfrançais
+    
+    
+    
+    
+    "
+
+
+      41 |     await send.press('Tab');
+      42 |     await expect(page.locator('body'), 'No "valid amount" message is shown after typing letters')
+    > 43 |       .toContainText(/Please enter a valid amount|monto v[aá]lido|importe v[aá]lido/i, { timeout: 5000 });
+         |        ^
+      44 |   });
+      45 |
+      46 |   test('"Send to" dropdown lets the user select a country (Haiti / HTG)', async ({ page }) => {
+        at <project>/playwright/tests/ria-calculator.spec.js:43:8
+
+    Error Context: evidence/latest/playwright-test-results/ria-calculator-Ria-calcula-ab592-nt-when-letters-are-entered/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidence/latest/playwright-test-results/ria-calculator-Ria-calcula-ab592-nt-when-letters-are-entered/trace.zip
+    Usage:
+
+        npx playwright show-trace evidence/latest/playwright-test-results/ria-calculator-Ria-calcula-ab592-nt-when-letters-are-entered/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) playwright/tests/ria-register-us.spec.js:21:3 › Register after switching the site country to United States [Playwright] › site country selector switches Chile -> United States (/en-us/) 
+
+    Error: BLOCKED: www /en-us/ answers automation with a bot challenge / 403 (Cloudflare). Not a test bug; not bypassed.
+
+       at ../lib/helpers.js:30
+
+      28 |     await page.waitForTimeout(8000); // one grace period; a real challenge does not clear for automation
+      29 |     if (await looksBlocked()) {
+    > 30 |       throw new BlockedError(`BLOCKED: ${what} answers automation with a bot challenge / 403 (Cloudflare). Not a test bug; not bypassed.`);
+         |             ^
+      31 |     }
+      32 |   }
+      33 | };
+        at assertNotBlocked (<project>/playwright/lib/helpers.js:30:13)
+        at Object.switchToUnitedStates (<project>/playwright/lib/helpers.js:162:3)
+        at <project>/playwright/tests/ria-register-us.spec.js:22:5
+
+    Error Context: evidence/latest/playwright-test-results/ria-register-us-Register-a-bb289-hile---United-States-en-us-/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidence/latest/playwright-test-results/ria-register-us-Register-a-bb289-hile---United-States-en-us-/trace.zip
+    Usage:
+
+        npx playwright show-trace evidence/latest/playwright-test-results/ria-register-us-Register-a-bb289-hile---United-States-en-us-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) playwright/tests/ria-register-us.spec.js:27:3 › Register after switching the site country to United States [Playwright] › Register after switching to United States shows the country selection page 
+
+    Error: BLOCKED: www /en-us/ answers automation with a bot challenge / 403 (Cloudflare). Not a test bug; not bypassed.
+
+       at ../lib/helpers.js:30
+
+      28 |     await page.waitForTimeout(8000); // one grace period; a real challenge does not clear for automation
+      29 |     if (await looksBlocked()) {
+    > 30 |       throw new BlockedError(`BLOCKED: ${what} answers automation with a bot challenge / 403 (Cloudflare). Not a test bug; not bypassed.`);
+         |             ^
+      31 |     }
+      32 |   }
+      33 | };
+        at assertNotBlocked (<project>/playwright/lib/helpers.js:30:13)
+        at Object.switchToUnitedStates (<project>/playwright/lib/helpers.js:162:3)
+        at <project>/playwright/tests/ria-register-us.spec.js:28:5
+
+    Error Context: evidence/latest/playwright-test-results/ria-register-us-Register-a-81ecd--the-country-selection-page/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidence/latest/playwright-test-results/ria-register-us-Register-a-81ecd--the-country-selection-page/trace.zip
+    Usage:
+
+        npx playwright show-trace evidence/latest/playwright-test-results/ria-register-us-Register-a-81ecd--the-country-selection-page/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) playwright/tests/ria-secure.spec.js:24:3 › secure.riamoneytransfer.com [Playwright] › Register navigates to /registration and shows the country selection page 
+
+    Error: GEO-BLOCKED: registration is not available from this location (Chile). Not a test bug.
+
+      29 |     // Observed from Chile: product geo-restriction modal instead of the country page.
+      30 |     if (/cannot register an account|no puedes registrar una cuenta/i.test(body)) {
+    > 31 |       throw new Error('GEO-BLOCKED: registration is not available from this location (Chile). Not a test bug.');
+         |             ^
+      32 |     }
+      33 |     expect(body).toMatch(/select (your )?country|country of residence|elige (tu )?pa[ií]s|selecciona (tu )?pa[ií]s/i);
+      34 |   });
+        at <project>/playwright/tests/ria-secure.spec.js:31:13
+
+    Error Context: evidence/latest/playwright-test-results/ria-secure-secure-riamoney-6502b--the-country-selection-page/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidence/latest/playwright-test-results/ria-secure-secure-riamoney-6502b--the-country-selection-page/trace.zip
+    Usage:
+
+        npx playwright show-trace evidence/latest/playwright-test-results/ria-secure-secure-riamoney-6502b--the-country-selection-page/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    playwright/tests/ria-calculator.spec.js:39:3 › Ria calculator (es-cl) - CLP -> Haiti HTG [Playwright] › shows "Please enter a valid amount" when letters are entered 
+    playwright/tests/ria-register-us.spec.js:21:3 › Register after switching the site country to United States [Playwright] › site country selector switches Chile -> United States (/en-us/) 
+    playwright/tests/ria-register-us.spec.js:27:3 › Register after switching the site country to United States [Playwright] › Register after switching to United States shows the country selection page 
+    playwright/tests/ria-secure.spec.js:24:3 › secure.riamoneytransfer.com [Playwright] › Register navigates to /registration and shows the country selection page 
+  6 passed (2.4m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report evidence/latest/playwright-report[39m
+[36m[39m

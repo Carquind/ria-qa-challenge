@@ -1,0 +1,16 @@
+node_modules/
+.env
+.DS_Store
+
+# generated locally, regenerable
+postman/newman-report.html
+cypress/videos/
+cypress/downloads/
+
+# raw connectivity dump (has cookie headers); a sanitized copy is committed in evidence/cloudflare-diagnostic/
+/diagnostics/
+
+# heavy Playwright artifacts (traces / HTML). Logs, JSON results and screenshots ARE committed.
+# Regenerate the HTML report with: npm run pw:test && npm run pw:report
+evidence/latest/playwright-report/
+evidence/latest/playwright-test-results/

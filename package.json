@@ -1,0 +1,32 @@
+{
+  "name": "ria-qa-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RIA QA coding challenge: E2E tests for riamoneytransfer.com (Selenium, Playwright, Cypress) + Postman/newman API tests",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "sel:test": "mocha selenium/tests --timeout 120000",
+    "sel:watch": "PAUSE=8000 mocha selenium/tests --timeout 120000",
+    "pw:test": "playwright test",
+    "pw:watch": "PAUSE=8000 playwright test",
+    "pw:report": "playwright show-report evidence/latest/playwright-report",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome",
+    "cy:watch": "cypress run --browser chrome --headed --env PAUSE=8000",
+    "cy:diag": "cypress run --browser chrome --config specPattern=cypress/diagnostics/**/*.cy.js --spec cypress/diagnostics/step1-connect.cy.js",
+    "api:test": "newman run postman/ria-api-tests.postman_collection.json -r cli,htmlextra --reporter-htmlextra-export postman/newman-report.html",
+    "api:build": "node postman/build-collection.js",
+    "evidence": "bash scripts/run-all.sh"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "cypress": "^13.15.0",
+    "cypress-real-events": "^1.15.1",
+    "mocha": "^10.8.2",
+    "newman": "^6.2.1",
+    "newman-reporter-htmlextra": "^1.23.1",
+    "selenium-webdriver": "^4.27.0"
+  }
+}

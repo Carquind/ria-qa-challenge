@@ -1,0 +1,10 @@
+{
+  "url": "https://www.riamoneytransfer.com/en-cl/",
+  "title": "Just a moment...",
+  "location": "https://www.riamoneytransfer.com/en-cl/",
+  "navigator": {
+    "webdriver": true,
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36"
+  },
+  "textStart": "www.riamoneytransfer.com\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a51aec94daf8ae89\nPerformance and Security by Cloudflare\nPrivacy"
+}
